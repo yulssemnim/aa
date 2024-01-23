@@ -1,0 +1,673 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Gulim';
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.modal .inner .inner_bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal .inner .inner_bg i {
+    position: absolute;
+    right: 8%;
+    top: 15%;
+    font-size: 45px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.modal .inner .inner_bg p {
+    position: absolute;
+    top: 190px;
+    left: 195px;
+    font-size: 75px;
+    color: #fa4848;
+}
+
+.modal .inner {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal .inner .rice_balls {
+    width: 380px;
+    height: 388px;
+    position: absolute;
+    left: 31%;
+    top: 40%;
+    cursor: pointer;
+
+
+}
+
+.modal .inner .rice_balls img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+
+.modal .inner .rice_balls .talk {
+    width: 233px;
+    height: 157px;
+    background-image: url(../img/sub_modal_inner_rice_talk.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: flex-start;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+
+
+.modal .inner .rice_balls .talk p {
+    text-align: center;
+    margin-left: 6px;
+    margin-top: 25px;
+    font-size: 19px;
+}
+
+.modal .inner .onion {
+    width: 386px;
+    height: 308px;
+    position: absolute;
+    right: 28%;
+    top: 48%;
+    cursor: pointer;
+}
+
+.modal .inner .onion img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.modal .inner .onion .talk {
+    width: 181px;
+    height: 122px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(../img/sub_modal_inner_onion_talk.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+
+}
+
+.modal .inner .onion .talk p {
+    font-size: 20px;
+    margin-left: 15px;
+    margin-top: 40px;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+}
+
+main .b_bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+main .bg_frame {
+    width: 250px;
+    height: 307px;
+    position: absolute;
+    left: 132px;
+    top: 73px;
+    background-image: url(../img/sub_bg2_hidden.png);
+    background-size: cover;
+    z-index: 3;
+}
+
+main .bg_frame .bg_slide {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+main .bg_frame .bg_slide img {
+    transition: all 2s;
+}
+
+main .bg_frame .bg_slide:hover img {
+    transform: translateX(240px);
+}
+
+
+main .bg_paper {
+    width: 1670px;
+    height: 695px;
+    position: absolute;
+    left: 195px;
+    top: 181px;
+}
+
+main .bg_paper .paper {
+    width: 283px;
+    height: 200px;
+}
+
+main .bg_paper .paper h2 {
+    font-size: 25px;
+    color: #ff3d3d;
+    margin-top: 45px;
+    margin-left: 45px;
+}
+
+main .bg_paper .paper p {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 40px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+main .bg_paper .paper_1 {
+    background-image: url(../img/sub_bg3.png);
+    background-size: contain;
+    position: absolute;
+    left: 12%;
+    top: 22%;
+    transform: rotate(5deg);
+}
+
+main .bg_paper .paper_2 {
+    background-image: url(../img/sub_bg3.png);
+    background-size: contain;
+    position: absolute;
+    top: -5%;
+    left: 36%;
+    transform: rotate(-5deg);
+}
+
+main .bg_paper .paper_2 p {
+    text-align: center;
+    margin-left: 10px;
+}
+
+main .bg_paper .paper_3 {
+    background-image: url(../img/sub_bg3.png);
+    background-size: contain;
+    position: absolute;
+    right: 10%;
+    bottom: 165px;
+}
+
+main ul.project_1 {
+    width: 680px;
+    height: 580px;
+    position: absolute;
+    left: 20px;
+    bottom: 65px;
+    display: flex;
+}
+
+main ul.project_1 li.pro_1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+main ul.project_1 li.pro_1 img {
+    position: relative;
+    z-index: 3;
+}
+
+main ul.project_1 li.pro_1 .acc {
+    position: absolute;
+    top: 50px;
+    opacity: 0;
+}
+
+main ul.project_1 li.pro_1:hover .acc {
+    animation: growUp linear 2s forwards;
+}
+
+@keyframes growUp {
+    0% {
+        top: 50px;
+        opacity: 0.5;
+    }
+
+    50% {
+        top: 30px;
+        opacity: 0.7;
+    }
+
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+
+main ul.project_1 li.pro_2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+main ul.project_1 li.pro_2 img {
+    position: relative;
+}
+
+main ul.project_1 li.pro_2 .acc {
+    position: absolute;
+    top: 50px;
+    opacity: 0;
+    left: 50px;
+}
+
+main ul.project_1 li.pro_2:hover .acc {
+    animation: growUp2 linear 2s forwards;
+}
+
+@keyframes growUp2 {
+    0% {
+        top: 50px;
+        opacity: 0;
+    }
+
+    50% {
+        top: -70px;
+        opacity: 0.5;
+    }
+
+    100% {
+        top: -100px;
+        opacity: 1;
+    }
+}
+
+
+main ul.project_1 li.pro_3 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+main ul.project_1 li.pro_3 img {
+    position: relative;
+
+}
+
+main ul.project_1 li.pro_3 .acc {
+    position: absolute;
+    top: -25px;
+    left: -20px;
+    z-index: 4;
+    opacity: 0;
+}
+
+main ul.project_1 li.pro_3:hover .acc {
+    animation: sparkle linear 1s infinite;
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+main .project_2 {
+    position: absolute;
+    left: 782px;
+    bottom: 65px;
+    width: 515px;
+    height: 617px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    z-index: 10;
+}
+
+main .project_2 .machine .acc {
+    position: absolute;
+    left: 110px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+main .project_2 .machine .acc .spk_1 {
+    animation: spk1 0.6s linear infinite;
+}
+
+@keyframes spk1 {
+    0% {
+        transform: rotate(-20deg);
+    }
+
+    50% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+main .project_2 .machine .acc .spk_2 {
+    margin-top: 10px;
+    animation: spk2 1s linear infinite;
+
+}
+
+@keyframes spk2 {
+    0% {
+        transform: rotate(5deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotate(-10deg);
+        opacity: .3;
+    }
+
+    100% {
+        transform: rotate(7deg);
+        opacity: 1;
+    }
+}
+
+main .project_2 .machine .kong_ya {
+    position: absolute;
+    left: 0;
+    top: 210px;
+}
+
+main .project_2 .machine .kong_ya img {
+    position: absolute;
+}
+
+main .project_2 .machine .kong_ya .option {
+    display: none;
+}
+
+main .project_2 .machine .kong_ya .op_1 {
+    display: block;
+    z-index: 3;
+}
+
+main .project_2 .machine .kong_ya .op_1:hover {
+    animation: Fear linear 0.2s infinite;
+}
+
+
+main .project_2 .machine .kong_ya .op_1_talk {
+    width: 297px;
+    height: 200px;
+    background-image: url(../img/k_option0_talk.png);
+    background-size: contain;
+    position: absolute;
+    left: 150px;
+    top: -100px;
+    display: none;
+}
+
+main .project_2 .machine .kong_ya .fear {
+    width: 228px;
+    height: 196px;
+    padding-top: 75px;
+    z-index: 2;
+    padding-left: 68px;
+    animation: Fear linear 0.2s infinite;
+    display: none;
+}
+
+@keyframes Fear {
+    0% {
+        transform: translateX(-3px);
+        transform: translateX(3px);
+    }
+}
+
+main .project_2 .machine .kong_ya:hover .op_1_talk {
+    display: block;
+}
+
+main .project_2 .machine .kong_ya .op_1_talk p {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 25px;
+}
+
+main .project_2 .operation {
+    width: 137px;
+    height: 350px;
+    border: 3px solid #000;
+    margin-bottom: 3px;
+    background: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    text-align: center;
+    line-height: 38px;
+}
+
+main .project_2 .operation .btn_all {
+    width: 105px;
+    height: 40px;
+    background: #ededed;
+    border: 3px solid #000;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+main .project_2 .operation .btn_6 {
+    font-size: 12px;
+}
+
+main .project_3 {
+    position: absolute;
+    right: 0;
+    bottom: 55px;
+    width: 736px;
+    height: 821px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main .project_3 .pro_top {
+    width: 633px;
+    height: 418px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #9ed1ff;
+
+
+}
+
+main .project_3 .pro_top .sun {
+    width: 704px;
+    height: 704px;
+    position: absolute;
+    left: 48%;
+    top: -32%;
+    transform: translateX(-50%);
+}
+
+main .project_3 .pro_top:hover .sun img {
+    animation: sun infinite linear 3s;
+    object-fit: cover;
+}
+
+@keyframes sun {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+main .project_3 .pro_top .window {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+main .project_3 .sun_light {
+    position: absolute;
+    right: 52px;
+    bottom: -5px;
+    display: none;
+}
+
+main .project_3 .pro_bottom {
+    width: 297px;
+    height: 310px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+main .project_3 .pro_bottom .before {
+    position: absolute;
+    left: 45%;
+}
+
+main .project_3 .pro_bottom .after {
+    position: absolute;
+    left: 60%;
+    bottom: -10px;
+    display: none;
+}
+
+main .project_result {
+    width: 305px;
+    height: 2121px;
+    position: absolute;
+    left: 23%;
+    top: 10%;
+}
+
+main .project_result img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+main .project_result .txt_box {
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    left: 50px;
+    text-align: center;
+}
+
+main .project_result .txt_box h2 {
+    color: #ff0202;
+    font-size: 38px;
+}
+
+main .project_result .txt_box p {
+    font-size: 28px;
+    margin-top: 30px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main .back_main {
+    width: 237px;
+    height: 76px;
+    background: #EC5555;
+    border: 3px solid #000;
+    position: fixed;
+    right: 2%;
+    bottom: 3%;
+    z-index: 15;
+    border-radius: 18px;
+    animation: backBtn linear 2s infinite;
+}
+
+@keyframes backBtn {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.03);
+    }
+
+    50% {
+        transform: scale(1.1)
+    }
+
+    75% {
+        transform: scale(1.05)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+main .back_main a {
+    width: 100%;
+    height: 100%;
+    line-height: 76px;
+    display: inline-block;
+    color: #fff;
+    font-family: 'JalnanGothic';
+    font-size: 40px;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
